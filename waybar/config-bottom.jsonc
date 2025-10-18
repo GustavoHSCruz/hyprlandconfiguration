@@ -1,0 +1,57 @@
+// -*- mode: jsonc -*-
+{
+	"layer": "top", // Waybar at top layer
+	"position": "bottom", // Waybar position (top|bottom|left|right)
+	"height": 80, // Waybar height (to be removed for auto height)
+	// "width": 1280, // Waybar width
+	"spacing": 6, // Gaps between modules (6px)
+	// Choose the order of the modules
+	"modules-left": [],
+	"modules-center": [
+		"custom/bravebrowser",
+		"custom/thunar",
+		"custom/vscode",
+		"custom/steam",
+		"custom/discord",
+		"custom/kittyterminal"
+	],
+	"modules-right": [],
+
+	// Modules configuration
+	"custom/bravebrowser": {
+		"format": " ", // FontAwesome icon for web browser
+		"tooltip": true,
+		"tooltip-format": "Abrir Navegador - Brave",
+		"on-click": "brave --ozone-platform=x11 %U"
+	},
+	"custom/thunar": {
+		"format": " ", // FontAwesome icon for file manager
+		"tooltip": true,
+		"tooltip-format": "Abrir Gerenciador de Arquivos - Thunar",
+		"on-click": "thunar ~"
+	},
+	"custom/vscode": {
+		"format": " ", // FontAwesome icon for VSCode
+		"tooltip": true,
+		"tooltip-format": "Abrir Visual Studio Code",
+		"on-click": "code"
+	},
+	"custom/steam": {
+		"format": " ", // FontAwesome icon for Steam
+		"tooltip": true,
+		"tooltip-format": "Abrir Steam",
+		"on-click": "steam"
+	},
+	"custom/discord": {
+		"format": " ", // FontAwesome icon for Discord
+		"tooltip": true,
+		"tooltip-format": "Abrir Discord",
+		"on-click": "discord"
+	},
+	"custom/kittyterminal": {
+		"format": " ", // FontAwesome icon for terminal
+		"tooltip": true,
+		"tooltip-format": "Abrir Terminal - Kitty",
+		"on-click": "kitty"
+	}
+}

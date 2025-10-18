@@ -1,0 +1,78 @@
+/* =====================
+   Waybar GPT Theme (GTK CSS subset)
+   - propriedades suportadas pelo Waybar/GTK
+   - acento verde, visual minimalista
+   - sem pseudo-classes (:hover), sem variáveis, sem filtros
+===================== */
+
+* {
+	font-family: "JetBrainsMono Nerd Font", "Symbols Nerd Font Mono", "FiraCode Nerd Font", "Font Awesome 6 Free", "Font Awesome 6 Brands", monospace;
+	font-size: 14px;
+	font-weight: 500;
+	min-height: 0;
+}
+
+window#waybar {
+	background-color: transparent;
+	border: none;
+	margin: 8px 12px 0 12px;
+}
+
+.modules-center {
+	background-color: rgba(24, 26, 32, 0.85);
+	color: #E6EAF2;
+	padding: 15px 20px;
+	margin: 4px 0;
+	border: 1px solid rgba(34, 255, 153, 0.15);
+	border-radius: 24px;
+}
+
+#custom-bravebrowser {
+	background-image: url("file:///home/gustavo/.config/waybar/icons/brave.svg");
+}
+
+#custom-thunar {
+	background-image: url("file:///home/gustavo/.config/waybar/icons/thunar.svg");
+}
+
+#custom-vscode {
+	background-image: url("file:///home/gustavo/.config/waybar/icons/vscode.svg");
+
+}
+
+#custom-steam {
+	background-image: url("file:///home/gustavo/.config/waybar/icons/steam.svg");
+}
+
+#custom-discord {
+	background-image: url("file:///home/gustavo/.config/waybar/icons/discord.svg");
+}
+
+#custom-kittyterminal {
+	background-image: url("file:///home/gustavo/.config/waybar/icons/kitty.svg");
+}
+
+#custom-bravebrowser,
+#custom-thunar,
+#custom-vscode,
+#custom-steam,
+#custom-discord,
+#custom-kittyterminal {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 50px 50px;
+	min-width: 50px;
+	min-height: 50px;
+	padding: 5px;
+	margin: 0 5px;
+}
+
+#custom-bravebrowser:hover,
+#custom-thunar:hover,
+#custom-vscode:hover,
+#custom-steam:hover,
+#custom-discord:hover,
+#custom-kittyterminal:hover {
+	background-color: rgba(70, 70, 71, 0.5);
+	border-radius: 10px;
+}

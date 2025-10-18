@@ -1,0 +1,133 @@
+// -*- mode: jsonc -*-
+{
+	"layer": "top", // Waybar at top layer
+	"position": "top", // Waybar position (top|bottom|left|right)
+	// "height": 10, // Waybar height (to be removed for auto height)
+	// "width": 1280, // Waybar width
+	"spacing": 6, // Gaps between modules (6px)
+	// Choose the order of the modules
+	"modules-left": [
+		"custom/menu",
+		"custom/file",
+		"custom/pipe",
+		"custom/terminal",
+		"custom/pipe",
+		"custom/bravebrowser",
+		"custom/pipe",
+		"custom/vscode",
+		"custom/pipe",
+		"custom/discord",
+		"custom/pipe",
+		"custom/steam"
+	],
+	"modules-center": ["clock", "custom/pipe", "network"],
+	"modules-right": [
+		"cpu",
+		"custom/pipe",
+		"memory",
+		"custom/pipe",
+		"pulseaudio",
+		"custom/pipe"
+	],
+
+	// Modules configuration
+
+	"custom/menu": {
+		// "format": "? \uf0c9", // FontAwesome icon for menu
+		"format": " ",
+		"tooltip": true,
+		"tooltip-format": "?? Abrir Menu Aplicações",
+		"on-click": "rofi -show drun"
+	},
+
+	"custom/pipe": {
+		"format": "|",
+		"tooltip": false
+	},
+
+	"custom/file": {
+		"format": " \uf07c  Arquivos", // FontAwesome icon for file manager
+		"tooltip": true,
+		"tooltip-format": "?? Abrir Gerenciador de Arquivos",
+		"on-click": "thunar ~"
+	},
+
+	"custom/terminal": {
+		"format": " \uf120  Terminal", // FontAwesome icon for terminal
+		"tooltip": true,
+		"tooltip-format": "?? Abrir Terminal - Kitty",
+		"on-click": "kitty"
+	},
+
+	"custom/bravebrowser": {
+		"format": " <span font='Font Awesome 7 Brands'>\ue63d</span> Brave", // FontAwesome icon for web browser
+		// "format": "Brave \ue63c", // FontAwesome icon for web browser
+		"tooltip": true,
+		"tooltip-format": "?? Abrir Navegador - Brave",
+		"on-click": "brave --ozone-platform=x11 %U"
+	},
+
+	"custom/vscode": {
+		"format": " <span font='Font Awesome 7 Brands'>\uf121</span>  Code", // FontAwesome icon for VSCode
+		// "format": "VSCode \uf5fc", // FontAwesome icon for VSCode
+		"tooltip": true,
+		"tooltip-format": "? Abrir Visual Studio Code",
+		"on-click": "code"
+	},
+
+	"custom/discord": {
+		"format": " <span font='Font Awesome 7 Brands'>\uf392</span> Discord", // FontAwesome icon for Discord
+		// "format": "Discord \uf392", // FontAwesome icon for Discord
+		"tooltip": true,
+		"tooltip-format": "?? Abrir Discord",
+		"on-click": "discord"
+	},
+
+	"custom/steam": {
+		"format": " <span font='Font Awesome 7 Brands'>\uf1b6</span> Steam", // FontAwesome icon for Steam
+		// "format": "Steam \uf1b6", // FontAwesome icon for Steam
+		"tooltip": true,
+		"tooltip-format": "?? Abrir Steam",
+		"on-click": "steam"
+	},
+
+	"clock": {
+		"format": " \uf017  {:%a, %d/%b/%y | %H:%M:%S}",
+		"interval": 1,
+		"tooltip": true,
+		"tooltip-format": "\uf133 {:%A, %d/%m/%Y\n\uf017 %H:%M:%S}"
+	},
+
+	"network": {
+		"interval": 2,
+		"format": "{bandwidthUpBytes} \uf093 | {bandwidthDownBytes} \uf019",
+		"tooltip": true,
+		"tooltip-format": "?? {ifname}\nIP: {ipaddr}"
+	},
+
+	"cpu": {
+		"interval": 1,
+		"format": " \uf2db {usage}% | {avg_frequency}GHz",
+		"tooltip": true,
+		"tooltip-format": "?? Load: {load}\n??? {temperatureC}°C"
+	},
+
+	"memory": {
+		"interval": 1,
+		"format": " \uf538 {used}/{total}GB ({percentage}%)",
+		"tooltip": true,
+		"tooltip-format": "?? Swap: {swapUsed}/{swapTotal}GB ({swapPercentage}%)\nLivre: {avail}GB"
+	},
+
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-muted": " \uf6a9 Mudo",
+		"format-icons": {
+			"default": [" \uf026", " \uf027", " \uf028"]
+		},
+		"scroll-step": 1,
+		"on-click": "pavucontrol",
+		"tooltip": true,
+		"tooltip-format": "?? Controle de Volume | Clique para abrir mixer"
+	}
+}
