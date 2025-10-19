@@ -18,7 +18,9 @@
 		"custom/pipe",
 		"custom/discord",
 		"custom/pipe",
-		"custom/steam"
+		"custom/steam",
+		"custom/pipe",
+		"custom/spotify"
 	],
 	"modules-center": ["clock", "custom/pipe", "network"],
 	"modules-right": [
@@ -72,7 +74,7 @@
 		// "format": "VSCode \uf5fc", // FontAwesome icon for VSCode
 		"tooltip": true,
 		"tooltip-format": "? Abrir Visual Studio Code",
-		"on-click": "code"
+		"on-click": "/home/gustavo/.local/VSCode-Linux-x64/bin/code"
 	},
 
 	"custom/discord": {
@@ -89,6 +91,14 @@
 		"tooltip": true,
 		"tooltip-format": "?? Abrir Steam",
 		"on-click": "steam"
+	},
+
+	"custom/spotify": {
+		"format": " <span font='Font Awesome 7 Brands'>\uf1bc</span> Spotify", // FontAwesome icon for Spotify
+		// "format": "Spotify \uf1bc", // FontAwesome icon for Spotify
+		"tooltip": true,
+		"tooltip-format": "?? Abrir Spotify",
+		"on-click": "spotify"
 	},
 
 	"clock": {

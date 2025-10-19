@@ -13,7 +13,8 @@
 		"custom/vscode",
 		"custom/steam",
 		"custom/discord",
-		"custom/kittyterminal"
+		"custom/kittyterminal",
+		"custom/spotify"
 	],
 	"modules-right": [],
 
@@ -34,7 +35,7 @@
 		"format": " ", // FontAwesome icon for VSCode
 		"tooltip": true,
 		"tooltip-format": "Abrir Visual Studio Code",
-		"on-click": "code"
+		"on-click": "/home/gustavo/.local/VSCode-Linux-x64/bin/code"
 	},
 	"custom/steam": {
 		"format": " ", // FontAwesome icon for Steam
@@ -53,5 +54,11 @@
 		"tooltip": true,
 		"tooltip-format": "Abrir Terminal - Kitty",
 		"on-click": "kitty"
+	},
+	"custom/spotify": {
+		"format": " ", // FontAwesome icon for Spotify
+		"tooltip": true,
+		"tooltip-format": "Abrir Spotify",
+		"on-click": "spotify"
 	}
 }

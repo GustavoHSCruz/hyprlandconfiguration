@@ -49,7 +49,8 @@ window#waybar {
 #custom-bravebrowser,
 #custom-vscode,
 #custom-discord,
-#custom-steam {
+#custom-steam,
+#custom-spotify {
 	padding: 6px 12px;
 	margin: 0 2px;
 	border-radius: 18px;
@@ -64,7 +65,8 @@ window#waybar {
 #custom-bravebrowser:hover,
 #custom-vscode:hover,
 #custom-discord:hover,
-#custom-steam:hover {
+#custom-steam:hover,
+#custom-spotify:hover {
 	background-color: rgba(34, 255, 153, 0.12);
 	color: #E6EAF2;
 }

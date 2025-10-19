@@ -52,12 +52,17 @@ window#waybar {
 	background-image: url("file:///home/gustavo/.config/waybar/icons/kitty.svg");
 }
 
+#custom-spotify {
+	background-image: url("file:///home/gustavo/.config/waybar/icons/spotify.svg");
+}
+
 #custom-bravebrowser,
 #custom-thunar,
 #custom-vscode,
 #custom-steam,
 #custom-discord,
-#custom-kittyterminal {
+#custom-kittyterminal,
+#custom-spotify {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 50px 50px;
@@ -72,7 +77,8 @@ window#waybar {
 #custom-vscode:hover,
 #custom-steam:hover,
 #custom-discord:hover,
-#custom-kittyterminal:hover {
+#custom-kittyterminal:hover,
+#custom-spotify:hover {
 	background-color: rgba(70, 70, 71, 0.5);
 	border-radius: 10px;
 }
